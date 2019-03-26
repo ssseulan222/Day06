@@ -10,7 +10,7 @@ public class FoodMain {
 		Food[]foods=new Food[3];
 		
 		System.out.println("첫번째 메뉴");
-		foods[0]
+//		foods[0]
 		
 		System.out.println("실행 할 번호 입력");
 		int sel = sc.nextInt();
