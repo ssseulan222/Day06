@@ -1,4 +1,4 @@
-package com.food;	//ì†ë‹˜ì´ ì„ íƒí•œ ë©”ë‰´
+package com.food;	//¼Õ´ÔÀÌ ¼±ÅÃÇÑ ¸Ş´º
 
 public class FoodMenu {
 	

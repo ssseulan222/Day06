@@ -1,4 +1,4 @@
-package com.food;	//ê° ë©”ë‰´ì˜ ì¬ê³ ìˆ˜ëŸ‰(save) íŒë§¤ìˆ˜ëŸ‰(sell) ê°€ê²©(price)
+package com.food;	//°¢ ¸Ş´ºÀÇ Àç°í¼ö·®(save) ÆÇ¸Å¼ö·®(sell) °¡°İ(price)
 
 public class FoodInput {
 	

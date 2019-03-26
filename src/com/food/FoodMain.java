@@ -4,49 +4,55 @@ import java.util.Scanner;
 
 public class FoodMain {
 	public static void main(String[] args) {
-		
+
 		Scanner sc = new Scanner(System.in);
-		Food food=new Food();
-		Food[]foods=new Food[3];
-		
-		System.out.println("ì²«ë²ˆì§¸ ë©”ë‰´");
-//		foods[0]
-		
-		System.out.println("ì‹¤í–‰ í•  ë²ˆí˜¸ ìž…ë ¥");
+		Food food = new Food();
+		Food[] foods = new Food[3];
+
+		for (int i = 0; i < foods.length; i++) {
+			System.out.println(i+1 + "¹øÂ° ¸Þ´º");
+			food.menu = sc.next();
+			System.out.println(i+1 + "¹øÂ° ¸Þ´º °¡°Ý");
+			food.price = sc.nextInt();
+			System.out.println(i+1 + "¹øÂ° ¸Þ´º Àç°í");
+			food.save = sc.nextInt();
+			foods[i]=food;
+		}
+
+		System.out.println("½ÇÇà ÇÒ ¹øÈ£ ÀÔ·Â");
 		int sel = sc.nextInt();
 		boolean check = true;
 
 		while (check) {
 			switch (sel) {
-			case 1:	//ì£¼ë¬¸
-				//---ë°˜ë³µ
-				//ë©”ë‰´ ì„ íƒ
-				//ê°œìˆ˜ ì„ íƒ (ìž¬ê³  ê°œìˆ˜)
-				// * ê°™ì€ ë©”ë‰´ ì„ íƒ ì‹œ ì´ì „ ì£¼ë¬¸ ì´ˆê¸°í™”
-				//---ë°˜ë³µ ë
-				//ì¢…ë£Œ
-				//ì˜ìˆ˜ì¦ ì¶œë ¥
-				while(check) {
-					
+			case 1: // ÁÖ¹®
+				// ---¹Ýº¹
+				// ¸Þ´º ¼±ÅÃ
+				// °³¼ö ¼±ÅÃ (Àç°í °³¼ö)
+				// * °°Àº ¸Þ´º ¼±ÅÃ ½Ã ÀÌÀü ÁÖ¹® ÃÊ±âÈ­
+				// ---¹Ýº¹ ³¡
+				// Á¾·á
+				// ¿µ¼öÁõ Ãâ·Â
+				while (check) {
+
 				}
 				break;
-				
-			case 2:	//ê²°ì‚°
-				//ë¼ë©´ : íŒë§¤ ê°œìˆ˜ - ì†Œí•©ê³„
-				//ê¹€ë°¥ : íŒë§¤ ê°œìˆ˜ - ì†Œí•©ê³„
-				//ë–¡ë³¶ì´ : íŒë§¤ ê°œìˆ˜ - ì†Œí•©ê³„
-				//ì´ í•©ê³„
-				
-				check=!check;	//ê²°ì‚° í›„ í”„ë¡œê·¸ëž¨ ì¢…ë£Œ
+
+			case 2: // °á»ê
+				// ¶ó¸é : ÆÇ¸Å °³¼ö - ¼ÒÇÕ°è
+				// ±è¹ä : ÆÇ¸Å °³¼ö - ¼ÒÇÕ°è
+				// ¶±ººÀÌ : ÆÇ¸Å °³¼ö - ¼ÒÇÕ°è
+				// ÃÑ ÇÕ°è
+
+				check = !check; // °á»ê ÈÄ ÇÁ·Î±×·¥ Á¾·á
 				break;
-				
+
 			default:
-				System.out.println("ìž˜ëª»ëœ ë²ˆí˜¸");
+				System.out.println("Àß¸øµÈ ¹øÈ£");
 				break;
 			}
 
 		}
-		
-		
+
 	}
 }
