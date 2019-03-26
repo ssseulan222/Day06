@@ -4,8 +4,14 @@ import java.util.Scanner;
 
 public class FoodMain {
 	public static void main(String[] args) {
-
+		
 		Scanner sc = new Scanner(System.in);
+		Food food=new Food();
+		Food[]foods=new Food[3];
+		
+		System.out.println("첫번째 메뉴");
+		foods[0]
+		
 		System.out.println("실행 할 번호 입력");
 		int sel = sc.nextInt();
 		boolean check = true;
@@ -20,6 +26,9 @@ public class FoodMain {
 				//---반복 끝
 				//종료
 				//영수증 출력
+				while(check) {
+					
+				}
 				break;
 				
 			case 2:	//결산
