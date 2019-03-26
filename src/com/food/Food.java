@@ -1,11 +1,12 @@
-package com.food;	// 라면, 김밥, 떡볶이 메뉴 저장
+package com.food;	
 
 public class Food {
 	
 	public void food() {
-		String[] ram;
-		String[] gim;
-		String[] dduk;
+		
+		int price;
+		String[] menu= {"김밥","라면","떡볶이"};
+		
 	}
 
 }
