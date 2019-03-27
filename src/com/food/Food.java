@@ -1,9 +1,10 @@
-package com.food;	//°¢ ¸Þ´ºÀÇ ÀÌ¸§, °¡°Ý, Àç°í 
+package com.food; //ë©”ë‰´ ì •ë³´ ìž…ë ¥
 
 public class Food {
-	
-		String menu;
-		int price;
-		int save;
+
+	String menu; // ë©”ë‰´
+	int price; // ê°€ê²©
+	int save; // ìž¬ê³ ëŸ‰
+	int totalPrice;
 
 }

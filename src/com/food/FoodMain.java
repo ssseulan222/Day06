@@ -6,53 +6,139 @@ public class FoodMain {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		Food food = new Food();
+
+//		Food food = new Food();
+//		Food[] foods = new Food[3];
+//		
+//		FoodInput fi = new FoodInput();
+//		FoodInput [] fis=new FoodInput[3];
+
 		Food[] foods = new Food[3];
+		int[] amount = new int[3];
+		int[] price = new int[3];
+		int[] totalPrice = new int[3];
 
 		for (int i = 0; i < foods.length; i++) {
-			System.out.println(i+1 + "¹øÂ° ¸Þ´º");
+			Food food = new Food();
+			System.out.println(i + 1 + "ë²ˆì§¸ ë©”ë‰´");
 			food.menu = sc.next();
-			System.out.println(i+1 + "¹øÂ° ¸Þ´º °¡°Ý");
+			System.out.println(i + 1 + "ë²ˆì§¸ ë©”ë‰´ ê°€ê²©");
 			food.price = sc.nextInt();
-			System.out.println(i+1 + "¹øÂ° ¸Þ´º Àç°í");
+			System.out.println(i + 1 + "ë²ˆì§¸ ë©”ë‰´ ìž¬ê³ ");
 			food.save = sc.nextInt();
-			foods[i]=food;
+			foods[i] = food;
+		}
+		for (int i = 0; i < foods.length; i++) {
+			System.out.println("ë©”   ë‰´ : " + foods[i].menu);
+			System.out.println("ê°€   ê²© : " + foods[i].price);
+			System.out.println("ìž¬ê³ ëŸ‰ : " + foods[i].save);
 		}
 
-		System.out.println("½ÇÇà ÇÒ ¹øÈ£ ÀÔ·Â");
+		System.out.println("ì£¼ë¬¸í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
+		System.out.println("1-ì£¼ë¬¸ / 2-ê²°ì‚°");
 		int sel = sc.nextInt();
 		boolean check = true;
 
-		while (check) {
-			switch (sel) {
-			case 1: // ÁÖ¹®
-				// ---¹Ýº¹
-				// ¸Þ´º ¼±ÅÃ
-				// °³¼ö ¼±ÅÃ (Àç°í °³¼ö)
-				// * °°Àº ¸Þ´º ¼±ÅÃ ½Ã ÀÌÀü ÁÖ¹® ÃÊ±âÈ­
-				// ---¹Ýº¹ ³¡
-				// Á¾·á
-				// ¿µ¼öÁõ Ãâ·Â
-				while (check) {
+		if (sel == 1) {
+			while (check) {
+				System.out.println("1-" + foods[0].menu);
+				System.out.println("2-" + foods[1].menu);
+				System.out.println("3-" + foods[2].menu);
+				System.out.println("4-ì¢…ë£Œ");
+
+				sel = sc.nextInt();
+
+				switch (sel) {
+
+				case 1:
+					System.out.println(foods[0].menu + " ì£¼ë¬¸");
+					System.out.println("ê°œìˆ˜ : ");
+					amount[0] = sc.nextInt();
+					totalPrice[0] = amount[0] * foods[0].price;
+					break;
+				case 2:
+					System.out.println(foods[1].menu + " ì£¼ë¬¸");
+					System.out.println("ê°œìˆ˜ : ");
+					amount[1] = sc.nextInt();
+					totalPrice[1] = amount[1] * foods[1].price;
+					break;
+				case 3:
+					System.out.println(foods[2].menu + " ì£¼ë¬¸");
+					System.out.println("ê°œìˆ˜ : ");
+					amount[2] = sc.nextInt();
+					totalPrice[2] = amount[2] * foods[2].price;
+					break;	 
+				default:
+					// ì˜ìˆ˜ì¦
+					if (amount[0] != 0) {
+						System.out.println(foods[0].menu + " : " + amount[0] + "--" + totalPrice[0]);
+					}
+					if (amount[1] != 0) {
+						System.out.println(foods[1].menu + " : " + amount[1] + "--" + totalPrice[1]);
+					}
+					if (amount[2] != 0) {
+						System.out.println(foods[2].menu + " : " + amount[2] + "--" + totalPrice[2]);
+					}
+					check = !check;
+					break;
 
 				}
-				break;
 
-			case 2: // °á»ê
-				// ¶ó¸é : ÆÇ¸Å °³¼ö - ¼ÒÇÕ°è
-				// ±è¹ä : ÆÇ¸Å °³¼ö - ¼ÒÇÕ°è
-				// ¶±ººÀÌ : ÆÇ¸Å °³¼ö - ¼ÒÇÕ°è
-				// ÃÑ ÇÕ°è
-
-				check = !check; // °á»ê ÈÄ ÇÁ·Î±×·¥ Á¾·á
-				break;
-
-			default:
-				System.out.println("Àß¸øµÈ ¹øÈ£");
-				break;
 			}
+		} else if (sel == 2) {
+			System.out.println("ê²°ì‚°ë‚´ì—­");
 
 		}
+
+//			switch (sel) {
+//			case 1: // ì£¼ë¬¸
+//				// ---ë°˜ë³µ
+//				// ë©”ë‰´ ì„ íƒ
+//				// ê°œìˆ˜ ì„ íƒ (ìž¬ê³  ê°œìˆ˜)
+//				// * ê°™ì€ ë©”ë‰´ ì„ íƒ ì‹œ ì´ì „ ì£¼ë¬¸ ì´ˆê¸°í™”
+//				// ---ë°˜ë³µ ë
+//				// ì¢…ë£Œ
+//				// ì˜ìˆ˜ì¦ ì¶œë ¥
+//				while (check) {
+//
+//					System.out.println("1-" + foods[0].menu);
+//					System.out.println("2-" + foods[1].menu);
+//					System.out.println("3-" + foods[2].menu);
+//					System.out.println("4-ì¢…ë£Œ");
+//					int select = sc.nextInt();
+//					switch (select) {
+//					case 1:
+//						fi.sel(select);
+//						System.out.println(fis);
+//						break;
+//					case 2:
+//						break;
+//					case 3:
+//						break;
+//					case 4:
+//						break;
+//					default:
+//						break;
+//					}
+//
+//				}
+//				break;
+//
+//			case 2: // ê²°ì‚°
+//				// ë¼ë©´ : íŒë§¤ ê°œìˆ˜ - ì†Œí•©ê³„
+//				// ê¹€ë°¥ : íŒë§¤ ê°œìˆ˜ - ì†Œí•©ê³„
+//				// ë–¡ë³¶ì´ : íŒë§¤ ê°œìˆ˜ - ì†Œí•©ê³„
+//				// ì´ í•©ê³„
+//
+//				check = !check; // ê²°ì‚° í›„ í”„ë¡œê·¸ëž¨ ì¢…ë£Œ
+//				break;
+//
+//			default:
+//				System.out.println("ìž˜ëª»ëœ ë²ˆí˜¸");
+//				break;
+//			}
+//
+//		}
 
 	}
 }

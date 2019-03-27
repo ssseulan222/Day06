@@ -1,9 +1,32 @@
-package com.food;	//°¢ ¸Ş´ºÀÇ Àç°í¼ö·®(save) ÆÇ¸Å¼ö·®(sell) °¡°İ(price)
+package com.food; //ì†ë‹˜ ì£¼ë¬¸ ë‚´ì—­
+
+import java.util.Scanner;
 
 public class FoodInput {
+
+//	int amount;
+//	int sell;
+//	int save=amount-sell;
+	Food food = new Food();
+	Food[] foods = new Food[3];
 	
-	int amount;
-	int sell;
-	int save=amount-sell;
+	FoodInput fi = new FoodInput();
+	FoodInput [] fis=new FoodInput[3];
+
+	int menuSel; // ì†ë‹˜ì´ ì„ íƒí•œ ë©”ë‰´
+	int amountSel; // ì„ íƒí•œ ê°œìˆ˜
+	int saveSel; // ë‚¨ì€ ì¬ê³ ëŸ‰
+	
+	public FoodInput[] sel(int select) {
+
+
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println(foods[select-1].menu+" ì£¼ë¬¸ ê°¯ìˆ˜ ì…ë ¥");
+		fi.amountSel = sc.nextInt();
+		fi.saveSel=foods[select-1].save-fis[select-1].amountSel;
+		fis[select-1]=fi;
+		return fis;
+	}
 
 }

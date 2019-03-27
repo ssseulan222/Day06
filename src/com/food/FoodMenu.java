@@ -1,7 +1,7 @@
-package com.food;	//손님이 선택한 메뉴
+package com.food; //
 
 public class FoodMenu {
-	
+
 	String selMenu;
 
 }
