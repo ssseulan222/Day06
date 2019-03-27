@@ -24,17 +24,16 @@ public class MenuView {
 
 	public void count(Food[] foods) { // 결산출력
 		int sum = 0;
-		if (foods.counts[i] > 0) {
-			for (int i = 0; i < foods.length; i++) {
-				System.out.println("메뉴명: " + foods[i].name);
-				System.out.println("판매수 : " + foods[i].count);
-				System.out.println("판매액 : " + foods[i].count * foods[i].price);
-				sum = sum + foods[i].count * foods[i].price;
-				System.out.println("------------------------");
-			}
-			System.out.println("총 판매액 : "+sum);
+
+		for (int i = 0; i < foods.length; i++) {
+			System.out.println("메뉴명: " + foods[i].name);
+			System.out.println("판매수 : " + foods[i].count);
+			System.out.println("판매액 : " + foods[i].count * foods[i].price);
+			sum = sum + foods[i].count * foods[i].price;
+			System.out.println("------------------------");
 		}
-		System.out.println("결산을 진행합니다.");
+		System.out.println("총 판매액 : " + sum);
+
 	}
 
 }
